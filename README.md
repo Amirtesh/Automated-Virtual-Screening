@@ -36,7 +36,7 @@ Ensure that **Vina**, **Smina**, and **QVina** are installed and available in yo
    ```
 
 3. **Run the Binary**:
-   To run the ligand screening process, execute the binary with the desired parameters:
+   To run the ligand screening process, execute the binary after placing it in current working directory or adding it to default path with the desired parameters:
    ```bash
    ./vscreen -dock <vina|smina|qvina> -exhaustiveness <exhaustiveness_level> -cpu <cpu_cores> -grid <grid_file> -convert <yes|no>
    ```
