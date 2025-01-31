@@ -42,7 +42,7 @@ Ensure that **Vina**, **Smina**, and **QVina** are installed and available in yo
    ```
    The executable file can also be placed in default path to be used directly from any directory:
    ```bash
-    vscreen -dock <vina|smina|qvina> -exhaustiveness <exhaustiveness_level> -cpu <cpu_cores> -grid <grid_file> -convert <yes|no>
+   vscreen -dock <vina|smina|qvina> -exhaustiveness <exhaustiveness_level> -cpu <cpu_cores> -grid <grid_file> -convert <yes|no>
    ```
 
    - `-dock`: Choose the docking program (`vina`, `smina`, or `qvina`). Docked poses are kept in a separate directory and results file is kept in current directory
