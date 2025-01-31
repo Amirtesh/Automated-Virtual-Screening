@@ -20,8 +20,8 @@ Before running the binary, ensure the following tools are installed and accessib
    - **MacOS (using Homebrew)**: `brew install open-babel`
 
 2. **Docking Software**:
-   - **Vina**: [Vina Installation Guide]([http://vina.scripps.edu/](https://vina.scripps.edu/downloads/))
-   - **Smina**: [Smina Installation Guide]([https://github.com/mwojcikowski/smina](https://sourceforge.net/projects/smina/))
+   - **Vina**: [Vina Installation Guide](https://vina.scripps.edu/downloads/)
+   - **Smina**: [Smina Installation Guide](https://sourceforge.net/projects/smina/)
    - **QVina**: [QVina Installation Guide](https://qvina.github.io/)
 
 Ensure that **Vina**, **Smina**, and **QVina** are installed and available in your system's default path, as the binary will call these programs directly.
