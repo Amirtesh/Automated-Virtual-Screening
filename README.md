@@ -36,9 +36,13 @@ Ensure that **Vina**, **Smina**, and **QVina** are installed and available in yo
    ```
 
 3. **Run the Binary**:
-   To run the ligand screening process, execute the binary after placing it in current working directory or adding it to default path with the desired parameters:
+   To run the ligand screening process, execute the binary after placing it in current working directory with the desired parameters:
    ```bash
    ./vscreen -dock <vina|smina|qvina> -exhaustiveness <exhaustiveness_level> -cpu <cpu_cores> -grid <grid_file> -convert <yes|no>
+   ```
+   The executable file can also be placed in default path to be used directly from any directory:
+   ```bash
+    vscreen -dock <vina|smina|qvina> -exhaustiveness <exhaustiveness_level> -cpu <cpu_cores> -grid <grid_file> -convert <yes|no>
    ```
 
    - `-dock`: Choose the docking program (`vina`, `smina`, or `qvina`). Docked poses are kept in a separate directory and results file is kept in current directory
@@ -52,7 +56,7 @@ Ensure that **Vina**, **Smina**, and **QVina** are installed and available in yo
    ./vscreen -dock vina -exhaustiveness 16 -cpu 4 -grid grid.txt -convert yes
    ```
 
-4. **Check Results**: After docking completes, results will be saved in a file named `docking_results.csv`. This file contains the ligand names and the corresponding docking scores.
+5. **Check Results**: After docking completes, results will be saved in a file named `docking_results.csv`. This file contains the ligand names and the corresponding docking scores.
 
 ## Supported Formats for Ligand Files
 
