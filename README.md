@@ -2,8 +2,6 @@
 
 ---
 
-# Ligand Screening Automation Binary
-
 This repository contains a **binary executable** that automates ligand screening using three different docking software tools: **Vina**, **Smina**, and **QVina** and either one of them can be used. The binary includes features for ligand file conversion, docking, and results management. It is designed for researchers, students, and computational chemists who need an easy way to automate molecular docking workflows.
 
 ## Features
