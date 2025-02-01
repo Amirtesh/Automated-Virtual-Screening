@@ -55,6 +55,7 @@ Ensure that **Vina**, **Smina**, and **QVina** are installed and available in yo
    ```bash
    ./vscreen -dock vina -exhaustiveness 16 -cpu 4 -grid grid.txt -convert yes
    ```
+   If your ligands are already prepared (energy minimized and in pdbqt form) please make sure to place all the ligands in a folder named `pdbqt_ligands` and give `convert` parameter as `no`.
 
 5. **Check Results**: After docking completes, results will be saved in a file named `docking_results.csv`. This file contains the ligand names and the corresponding docking scores.
 
