@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Combined script
 
-# Function to show help
 show_help() {
     echo "Usage: $0 [options]"
     echo "Options:"
@@ -14,7 +12,6 @@ show_help() {
     echo "  -convert <yes|no>       Convert ligand files to .pdbqt format (default: no)."
 }
 
-# Function to handle ligand file conversion
 conversion_function() {
     WORKDIR="$(pwd)"
     ORIGINAL_DIR="$WORKDIR/Original_ligands"
@@ -37,7 +34,6 @@ conversion_function() {
     echo "Conversion of ligand files completed"
 }
 
-# Function for Vina docking
 vina_dock_function() {
     if [ ! -f "grid.txt" ]; then
         echo "Error: grid.txt file not found!"
@@ -80,7 +76,6 @@ vina_dock_function() {
     echo "Docking completed. Results stored in $OUTPUT_CSV"
 }
 
-# Function for Smina docking
 smina_dock_function() {
     if [ ! -f "grid.txt" ]; then
         echo "Error: grid.txt file not found!"
@@ -123,7 +118,6 @@ smina_dock_function() {
     echo "Docking completed. Results stored in $OUTPUT_CSV"
 }
 
-# Function for QVina docking
 qvina_dock_function() {
     if [ ! -f "grid.txt" ]; then
         echo "Error: grid.txt file not found!"
@@ -166,14 +160,12 @@ qvina_dock_function() {
     echo "Docking completed. Results stored in $OUTPUT_CSV"
 }
 
-# Argument parsing for the main script
 DOCK_PROGRAM=""
 EXHAUSTIVENESS=""
 CPU=""
 GRID_FILE=""
 CONVERT=""
 
-# Argument parsing code
 while [[ $# -gt 0 ]]; do
     case $1 in
         -h)
@@ -208,25 +200,21 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-# Apply default values for any parameters that were not provided
 : ${EXHAUSTIVENESS:=16}
 : ${CPU:=1}
 : ${GRID_FILE:="grid.txt"}
 : ${CONVERT:="no"}
 
-# Ensure that docking program is provided
 if [ -z "$DOCK_PROGRAM" ]; then
     echo "Error: You must specify a docking program (vina, smina, or qvina)."
     show_help
     exit 1
 fi
 
-# Convert ligands if requested
 if [ "$CONVERT" == "yes" ]; then
     conversion_function
 fi
 
-# Run the docking program
 if [ "$DOCK_PROGRAM" == "vina" ]; then
     echo "Running Vina..."
     vina_dock_function $EXHAUSTIVENESS $CPU
